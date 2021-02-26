@@ -1,0 +1,63 @@
+/*
+.swiper-container {
+    width: 100%;
+    height: 830px;
+}
+.swiper-button {
+    background-image: none;
+
+    &::after{
+        content: './img/arrowLeft.svg';
+    }
+}*/
+.banner {
+
+    &-container {
+        display: flex;  
+    }
+   
+
+    &__swiper {
+        align-self: flex-end;
+        justify-self: flex-start;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 64px;
+        text-transform: uppercase;
+        color: $gray4;
+        margin-bottom: 90px;
+
+        b {
+            color: $gray1;
+        }
+    }
+
+    &__wrap {
+        margin-bottom: 90px;
+    }
+
+    &__pages {
+        display: inline-block;
+        margin-bottom: 90px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        color: $gray4;
+    }
+
+    &__slider {
+        width: 64%;
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

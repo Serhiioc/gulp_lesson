@@ -1,0 +1,48 @@
+.button {
+    border: none;
+    display: inline-block;
+
+    &__img {
+        margin-left: 12px;
+        display: inline-block;
+        width: 17px;
+    }
+
+    &__primary {
+    width: 222px;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    }
+
+    &--light {
+        background-color: #ffffff;
+        color: $gray1;
+
+        &:hover, &:focus {
+            background-color: #F2F2F2;
+        }
+    }
+
+    &--dark {
+        background-color: $gray1;
+        color: #ffffff;
+
+        &:hover, &:focus {
+            background-color: darken($gray1, 20%);
+        }
+    }
+
+    &--s {
+        width: 55px;
+        height: 55px;
+    }
+
+}

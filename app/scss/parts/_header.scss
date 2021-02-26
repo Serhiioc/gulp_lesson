@@ -1,0 +1,41 @@
+.header {
+    @include displayflex(space-between);
+    padding: 30px 0;
+    color: $gray1;
+}
+
+.logo {
+    width: 70px;
+    margin-right: 35%;
+}
+
+.nav {
+    width: 65%;
+    flex-grow: 1;
+    // .nav__list
+
+    &__list {
+        @include displayflex(flex-start);
+        flex-wrap: wrap;
+    }
+
+    // .nav__item
+
+    &__item {
+        margin-right: 60px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    &__link.select {
+        border-top: 1px solid $gray1;
+        border-bottom: 1px solid $gray1;
+    }
+    
+}
