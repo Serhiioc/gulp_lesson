@@ -23,6 +23,7 @@ let project_folder = require("path").basename(__dirname);
 // ! Массив значений
 let parth = {
   build: {
+    php: project_folder + "/php",
     html: project_folder + "/",
     css: project_folder + "/css",
     js: project_folder + "/js",
@@ -30,15 +31,17 @@ let parth = {
     img: project_folder + "/img",
   },
   src: {
+    php: source_folder + "/php/*.php",
     htmlpart: source_folder + "/**/*.html",
-    html: source_folder + "/index.html",
+    html: source_folder + "/*.html",
     css: source_folder + "/scss/*.scss",
     fontScss: source_folder + "/scss/_fonts.scss",
-    js: source_folder + "/js/common.js",
+    js: source_folder + "/js/*.js",
     fonts: source_folder + "/fonts/*.ttf",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
   },
   watch: {
+    php: source_folder + "/php/*.php",
     html: source_folder + "/**/*.html",
     css: source_folder + "/scss/**/*.scss",
     js: source_folder + "/js/**/*.js",
@@ -101,6 +104,12 @@ function createFiles(done) {
   }, 500);
 
   done();
+};
+
+// ! PHP
+function php() {
+  return src(parth.src.php)
+  .pipe(dest(parth.build.php))
 };
 
 // ! Создание файлов верстки
@@ -218,6 +227,7 @@ function watchFiles() {
   watch([parth.watch.css], convertStyles);
   watch([parth.watch.img], imageMin);
   watch([parth.watch.js], js);
+  watch([parth.watch.php], php);
   watch([parth.watch.html]).on("change", sync.reload)
   watch([parth.watch.css]).on("change", sync.reload)
 };
@@ -308,7 +318,7 @@ const fontsStyle = (done) => {
 };
 
 // ! Глобализация функций
-let assembly = series(clean, parallel(html, styles, jsIn, imageMin));
+let assembly = series(clean, parallel(html, php, styles, jsIn, imageMin));
 
 let build = series(clean, parallel(html, convertStyles, js, imageMin));
 
@@ -317,6 +327,7 @@ exports.build = build;
 exports.js = js;
 exports.clean = clean;
 exports.html = html;
+exports.php = php;
 exports.watchFiles = watchFiles;
 exports.browserSync = browserSync;
 exports.imageMin = imageMin;

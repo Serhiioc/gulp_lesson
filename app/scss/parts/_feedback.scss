@@ -4,9 +4,17 @@
     &__container {
         display: grid;
         grid-template-columns: 33% 1fr;
-        grid-gap: 0 30px;
+        grid-gap: 30px;
         align-items: flex-start;
         width: 100%;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 650px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__title {
@@ -16,6 +24,18 @@
         font-size: 64px;
         line-height: 64px;
         color: $gray4;
+
+        @media (max-width: 650px) {
+            grid-column: span 1;
+        }
+
+        @media (max-width: 590px) {
+            font-size: 54px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 40px;
+        }
     }
 }
 

@@ -1,0 +1,98 @@
+
+.banner {
+
+    &-container {
+        max-height: 830px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between; 
+        
+        @media (max-width: 850px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+   
+
+    &__wrap {
+        align-self: center;
+        justify-self: flex-start;
+
+        @media (max-width: 850px) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+    }
+
+    &__title {
+        border: none;
+        padding: 0;
+        margin-bottom: 90px;
+
+        @media (max-width: 850px) {
+            margin-bottom: 30px;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__control {
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    
+    // &__wrap {
+    //     margin-bottom: 90px;
+    // }
+
+    &__pages {
+        display: flex;
+        margin: 90px 0;
+        width: 140px;
+        align-items: center;
+        justify-content: space-between;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        color: $gray4;
+
+        @media (max-width: 850px) {
+            margin: 0;
+            min-width: 80px;
+        }
+
+    }
+
+    &__swiper {
+        padding-bottom: 24px;
+        width: 64%;
+    }
+
+    &__slide {
+        position: relative;
+        box-sizing: content-box;
+        height: fit-content;
+    }
+    
+    &__img {
+        object-fit: cover;
+        repeat: none;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    
+}

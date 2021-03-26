@@ -1,26 +1,37 @@
 @@include('./partsHtml/_header.html', {"title" : "Digital Project"})
-<main>
+
   <div class="banner">
     <div class="container banner-container">
+        <!-- <div class="banner__swiper"> -->
+          
+        <div class="banner__wrap">
+          <h1 class="title banner__title">Project <b>Nurtown</b></h1>
+          <button class="button button--light button--s banner__control swip__button--prev">
+                  <img src="./img/arrowLeft.svg" alt="arrowLeft">
+          </button>
+          <button class="button button--light button--s banner__control swip__button--next">
+                  <img src="./img/arrowRight.svg" alt="arrowRight">
+          </button>
+          <div class="banner__pages"></div>
+        </div>
         <div class="banner__swiper">
-            <h1 class="banner__title">Project <b>Nurtown</b></h1>
-            <div class="banner__wrap">
-                <button class="button button--light button--s">
-                    <img src="./img/arrowLeft.svg" alt="arrowLeft">
-                  </button>
-                <button class="button button--light button--s">
-                    <img src="./img/arrowRight.svg" alt="arrowRight">
-                  </button>
+          <div class="swiper-wrapper">
+            <div class="banner__slide swiper-slide">
+                <img class="banner__img" src="./img/swip1.jpg" alt="Nurtown">
+                <a href="#" class="button button__primary button--light banner__button">
+                  Взглянуть <img class="button__img" src="./img/arrowRight.svg" alt="arrowRight">
+                </a>
             </div>
-            <span class="banner__pages">01/02</span>
+            <div class="banner__slide swiper-slide">
+                <img class="banner__img" src="./img/swip1.jpg" alt="Nurtown">
+                <a href="projects.html" class="button button__primary button--light banner__button">
+                  Взглянуть <img class="button__img" src="./img/arrowRight.svg" alt="arrowRight">
+                </a>
+            </div>
+          </div>  
         </div>
-        <div class="banner__slider">
-            <img class="banner__img" src="./img/swip1.jpg" alt="Nurtown">
-            <a href="#" class="button button__primary button--light banner__button">
-              Взглянуть <img class="button__img" src="./img/arrowRight.svg" alt="arrowRight">
-            </a>
-        </div>
-    </div> 
+        <!-- </div>  -->
+    </div>
   </div>
   <div class="about">
     <div class="container about-container">
@@ -50,22 +61,24 @@
     <div class="container tasks-container">
       <h2 class="tasks__title">Основные задачи</h2>
       <div class="tasks__inner">
-        <div class="tasks__num">
-          <svg xmlns="http://www.w3.org/2000/svg">
+        <span class="tasks__num">
+          1
+          <!-- <svg xmlns="http://www.w3.org/2000/svg">
           <path d="M35.9688 141V35.5312H35.1875L0.617188 58.3828V23.7148L35.9688 0.0820312H77.375V141H35.9688Z"/>
-          </svg>
-        </div>
+          </svg> -->
+        </span>
         <div class="tasks__desc">
           Создание комфортных условий и повышение качества обслуживания клиентов
         </div>
       </div>
       <div class="tasks__inner">
-        <div class="tasks__num">
+        <p class="tasks__num">
+          2
           <!-- <img src="./img/2.svg" alt="2"> -->
-          <svg xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg">
             <path d="M0.0546875 48.3203C0.0546875 33.8672 5.29557 22.2461 15.7773 13.457C26.2591 4.60286 40.1914 0.175781 57.5742 0.175781C74.5013 0.175781 87.9128 4.11458 97.8086 11.9922C107.77 19.8047 112.75 30.1562 112.75 43.0469C112.75 46.6927 112.132 50.4036 110.895 54.1797C109.658 57.8906 108.225 61.0807 106.598 63.75C105.035 66.4193 102.984 69.2188 100.445 72.1484C97.9714 75.0781 95.9857 77.2591 94.4883 78.6914C92.9909 80.1237 91.168 81.7839 89.0195 83.6719L55.9141 112.969V113.75H114.41V145H2.49609V117.461L59.1367 67.3633C63.9544 63.0664 67.4375 59.1276 69.5859 55.5469C71.7995 51.901 72.9062 48.1576 72.9062 44.3164C72.9062 40.4102 71.4089 37.1875 68.4141 34.6484C65.4193 32.0443 61.3177 30.7422 56.1094 30.7422C50.7057 30.7422 46.2786 32.3698 42.8281 35.625C39.4427 38.8802 37.75 43.0794 37.75 48.2227V49.1016H0.0546875V48.3203Z"/>
-            </svg>
-        </div>
+            </svg> -->
+        </p>
         <div class="tasks__desc">
           Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала, закупки нового оборудования и усиленной рекламы на рынке
         </div>
@@ -79,10 +92,11 @@
         <div class="projects__picture">
           <div class="projects__hover hover">
             <h4 class="hover__title">Досуговый
-              Центр</h4>
-              <a href="#" class="hover__link">Подробнее
-                <img class="button__img" src="./img/arrowRightLight.svg" alt="arrowRight">
-              </a>
+              Центр
+            </h4>
+            <a href="#" class="hover__link">Подробнее
+              <img class="button__img" src="./img/arrowRightLight.svg" alt="arrowRight">
+            </a>
           </div>
           <img src="./img/project1.jpg" alt="build" class="project__img">
         </div>
@@ -127,7 +141,7 @@
           <img src="./img/project5.jpg" alt="build" class="project__img">
         </div>
       </div>
-      <div class="projects__link"><a href="#" class="button button__primary button--dark">Все проекты
+      <div class="projects__link"><a href="#" class="button button__primary button--dark project__button">Все проекты
         <img class="button__img" src="./img/arrowRightLight.svg" alt="arrowRight">
       </a>
       </div>
@@ -136,70 +150,23 @@
   <div class="feedback">
     <div class="container feedback__container">
       <h3 class="feedback__title">Связаться с нами</h3>
-      <form class="form feedback__form">
-        <input type="text" class="form__input" placeholder="Имя">
-        <input type="text" class="form__input" placeholder="Номер телефона">
-        <input type="text" class="form__input" placeholder="E-mail">
-        <input type="text" class="form__input" placeholder="Интересующий товар/услуга">
-        <textarea  class="form__input" placeholder="Сообщение"></textarea>
+      <form class="form feedback__form"  action="./php/mail.php" method="POST">
+        <input type="text" class="form__input" placeholder="Имя" name="user-name" required data-validate-field="name">
+        <input type="tel" class="form__input phone" placeholder="Номер телефона" name="user-phone" required  data-validate-field="phone">
+        <input type="text" class="form__input" placeholder="E-mail" name="user-email" required data-validate-field="email">
+        <input type="text" class="form__input" placeholder="Интересующий товар/услуга" name="user-product">
+        <textarea  class="form__input" placeholder="Сообщение" name="user-message" required></textarea>
         <label class="form__desc">
-          <input type="checkbox">
+          <input class="form__check" type="checkbox" value="accept" required>
+          <span class="form__check--custom"></span>
           Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
         </label>
-        <button class= "button button__primary button--dark" type="submit">Отправить
+        <button class= "button button__primary button--dark form__button" type="submit">Отправить
           <img class="button__img" src="./img/arrowRightLight.svg" alt="arrowRight">
         </button>
       </form>
       <div class="feedback__picture"><img class="feddback__image" src="./img/feedback.jpg" alt="write me"></div>
     </div>
   </div>
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__top">
-        <div class="footer__logo">
-          <a class="logo__link" href="index.html"><img src="./img/logo-light.svg" alt="Digital Project"></a>
-        </div>
-        <div class="footer__info">
-          <h4 class="footer__title">Информация</h4>
-          <ul class="footer__list">
-            <li class="footer__item"><a class="footer__link" href="#">Главная</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Галерея</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Проекты</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Сертификаты</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
-          </ul>
-        </div>
-        <div class="footer__contacts">
-          <h4 class="footer__title">Контакты</h4>
-          <ul class="footer__list">
-            <li class="footer__item "> <span class="icon-location"></span><a class="footer__link" href="#"> 100000, Республика  Казахстан, 
-              г. Караганда, ул. Телевизионная 10</a></li>
-            <li class="footer__item"><a class="footer__link icon-phone" href="tel:380977634750">+7 (701) 77 76 811</a></li>
-            <li class="footer__item"><a class="footer__link icon-mail" href="mailto:">Galym.sultanov@mail.ru</a></li>
-          </ul>
-        </div>
-        <div class="footer__social">
-          <h4 class="footer__title">Социальные сети</h4>
-            <div class="footer__item">
-              <a class="footer__link icon-facebook" href="www.facebook.com"></a>
-            </div>
-            <div class="footer__item">
-              <a class="footer__link icon-twitter" href="www.twiter.com"></a>
-            </div>
-            <div class="footer__item">
-              <a class="footer__link icon-linkedin" href="linkedin.com"></a>
-            </div>
-            <div class="footer__item">
-              <a class="footer__link icon-pinterest" href="pinteres.com"></a>
-            </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom">&copy 2019 Digital Project. Все права защищены.</div>
-  </footer>
-</main>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="./js/common.min.js"></script>
-</body>
-</html>
+ 
+  @@include('./partsHtml/_footer.html')

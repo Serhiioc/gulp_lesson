@@ -1,5 +1,5 @@
 .form {
-    widows: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: minmax(200px, 1fr);
     grid-gap: 10px 0;
@@ -31,5 +31,111 @@
         line-height: 17px;
         letter-spacing: 0.03em;
         color: $gray1;
+        position: relative;
+        margin-left: 35px;
+        text-indent: -5px;
+        cursor: pointer;
     }
+
+    &__submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        background-color: $gray1;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            background-color: darken($gray1, 20%);
+        }
+
+    }
+
+   &__title {
+        display: inline-block;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: $gray1;
+        margin: 25px 0;
+        text-align: center;
+   }
+
+   &__exit {
+        // margin-left: 98px;
+        position: absolute;
+        top: 29px;
+        right: -115px;
+
+        @media (max-width: 450px) {
+            position: static;
+            margin-left: 15px;
+            margin-bottom: 3px;
+        }
+   }
+
+   &__check {
+       appearance: none;
+        position: absolute;
+        // width: 1px;
+        // height: 1px;
+        // overflow: hidden;
+        // clip: rect(0, 0, 0, 0);
+        // opacity: 0;
+        // visibility: hidden;
+
+        &:focus {
+            border: hidden;
+            visibility: hidden;
+        }
+
+        
+
+        &--custom {
+            position: absolute;
+            height: 26px;
+            width: 26px;
+            margin-top: -5px;
+            margin-left: -35px;
+            border-radius: 2px;
+            background-color: #F3F3F3;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &:checked + .form__check--custom {
+            background-image: url(../img/checked.svg);
+        } 
+
+        &:disabled + .form__check--custom {
+            height: 22px;
+            width: 22px;
+            opacity: 0.5;
+        } 
+
+        &:focus + .form__check--custom {
+            height: 26px;
+            width: 26px;
+            border: 2px solid $gray4;
+        }
+        
+        
+
+
+        
+   }
+}
+
+.js-validate-error-label {
+    font-size: 12px;
+    margin: -10px 0;
 }
